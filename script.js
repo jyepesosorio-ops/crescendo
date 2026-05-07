@@ -288,13 +288,15 @@ class SignalField {
 
 const canvas = document.getElementById('field-canvas');
 let field = null;
-try {
-  field = canvas && webglDependenciesReady ? new SignalField(canvas) : null;
-} catch (e) {
-  console.warn('Crescendo Labs: WebGL field failed to initialize.', e);
-}
-if (field) {
-  field.start();
+
+if (canvas && webglDependenciesReady) {
+  try {
+    field = new SignalField(canvas);
+    field.start();
+  } catch (error) {
+    canvas.remove();
+    console.warn('Crescendo Labs: WebGL field failed to initialize.', error);
+  }
 }
 
 if (motionDependenciesReady && typeof Lenis !== 'undefined' && !reducedMotion) {
@@ -362,6 +364,22 @@ navTl
     { opacity: 0, y: 24 },
     { opacity: 1, y: 0, duration: 0.34, ease: 'none' },
     0.5);
+
+const heroSplitLines = gsap.utils.toArray('.hero-title span');
+
+if (heroSplitLines.length) {
+  gsap.fromTo(heroSplitLines,
+    { opacity: 0, y: 10, filter: 'blur(1px)' },
+    {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      duration: 0.8,
+      delay: 0.55,
+      stagger: 0.12,
+      ease: 'power2.out',
+    });
+}
 
 gsap.utils.toArray('.reveal-clip').forEach((el) => {
   const heroDelay = el.closest('#hero') ? (el.classList.contains('hero-right') ? 1.6 : 0.9) : 0;
