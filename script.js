@@ -2,6 +2,7 @@ const motionDependenciesReady = typeof gsap !== 'undefined' && typeof ScrollTrig
 const webglDependenciesReady = typeof THREE !== 'undefined';
 
 if (motionDependenciesReady) {
+  document.documentElement.dataset.motionBooted = 'true';
   gsap.registerPlugin(ScrollTrigger);
 } else {
   document.documentElement.classList.remove('js');
