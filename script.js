@@ -286,6 +286,79 @@ class SignalField {
   }
 }
 
+class FallbackSignalField {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d', { alpha: true });
+    this.time = 0;
+    this.points = [];
+    this.count = 260;
+    this.resize();
+    this.build();
+    window.addEventListener('resize', () => {
+      this.resize();
+      this.build();
+    });
+  }
+
+  resize() {
+    const rect = this.canvas.getBoundingClientRect();
+    this.width = rect.width || window.innerWidth;
+    this.height = rect.height || window.innerHeight;
+    this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    this.canvas.width = Math.floor(this.width * this.dpr);
+    this.canvas.height = Math.floor(this.height * this.dpr);
+    this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+  }
+
+  build() {
+    const centerX = this.width * 0.61;
+    const centerY = this.height * 0.48;
+    const maxRadius = Math.min(this.width, this.height) * 0.34;
+    this.points = Array.from({ length: this.count }, (_, index) => {
+      const t = index / this.count;
+      const angle = t * Math.PI * 10;
+      const radius = maxRadius * (1 - t * 0.84);
+      return {
+        x: centerX + Math.cos(angle) * radius,
+        y: centerY + Math.sin(angle) * radius,
+        z: t,
+        phase: Math.random() * Math.PI * 2,
+        size: 1.1 + (1 - t) * 1.8,
+        accent: index % 43 === 0,
+      };
+    });
+  }
+
+  draw() {
+    this.time += reducedMotion ? 0.004 : 0.012;
+    this.ctx.clearRect(0, 0, this.width, this.height);
+    this.ctx.globalCompositeOperation = 'source-over';
+
+    for (const point of this.points) {
+      const drift = Math.sin(this.time + point.phase) * 9 * (1 - point.z);
+      const x = point.x + Math.cos(point.phase + this.time * 0.65) * drift;
+      const y = point.y + Math.sin(point.phase + this.time * 0.45) * drift;
+      const alpha = point.accent ? 0.8 : 0.24 + (1 - point.z) * 0.32;
+
+      this.ctx.beginPath();
+      this.ctx.fillStyle = point.accent
+        ? `rgba(54, 91, 196, ${alpha})`
+        : `rgba(214, 213, 204, ${alpha})`;
+      this.ctx.arc(x, y, point.size, 0, Math.PI * 2);
+      this.ctx.fill();
+    }
+  }
+
+  start() {
+    const frame = () => {
+      this.draw();
+      requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  }
+}
+
 const canvas = document.getElementById('field-canvas');
 let field = null;
 
@@ -294,9 +367,13 @@ if (canvas && webglDependenciesReady) {
     field = new SignalField(canvas);
     field.start();
   } catch (error) {
-    canvas.remove();
-    console.warn('Crescendo Labs: WebGL field failed to initialize.', error);
+    console.warn('Crescendo Labs: WebGL field failed, using canvas renderer.', error);
+    field = new FallbackSignalField(canvas);
+    field.start();
   }
+} else if (canvas) {
+  field = new FallbackSignalField(canvas);
+  field.start();
 }
 
 if (motionDependenciesReady && typeof Lenis !== 'undefined' && !reducedMotion) {
