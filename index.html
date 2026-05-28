@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crescendo Labs - Insurance Operations Infrastructure</title>
+  <meta name="description" content="Automation, data systems, dashboards, and web apps for insurance teams running on manual processes.">
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(() => {
+      if (!document.documentElement.dataset.motionBooted) {
+        document.documentElement.classList.remove('js');
+      }
+    }, 2200);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor-orb" aria-hidden="true"></div>
+
+  <nav id="nav" aria-label="Primary navigation">
+    <div class="nav-shell">
+      <a class="brand" href="#hero">
+        <span class="brand-full">CRESCENDO<br>LABS</span>
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#proof">Our Work</a>
+        <a href="#process">Process</a>
+        <a class="nav-cta" href="https://cal.com/crescendolabs/discovery" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="panel hero" data-field="vortex">
+      <canvas id="field-canvas" aria-hidden="true"></canvas>
+
+      <h1 class="hero-title" aria-label="From manual friction to operating systems">
+        <span class="hero-left reveal-clip">From manual friction</span>
+        <span class="hero-right reveal-clip">to operating systems</span>
+      </h1>
+
+      <div class="hero-footer reveal">
+        <a class="corner-button" href="https://cal.com/crescendolabs/discovery" target="_blank" rel="noopener">Contact us</a>
+        <p>Automation / CRM workflows / data pipelines / dashboards / web apps for insurance operations running on manual processes. Based in Medellín — working across Medicare, Medicaid, and private providers.</p>
+        <div class="hero-proof" aria-label="Operating system outcomes">
+          <span>Inputs cleaned</span>
+          <span>Workflows routed</span>
+          <span>Decisions visible</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof-bar" class="proof-bar reveal-group" aria-label="Proof metrics">
+      <article class="stat reveal-child">
+        <span>SHERPA EXTRACTION</span>
+        <strong>3mo &rarr; 1wk</strong>
+      </article>
+      <article class="stat reveal-child">
+        <span>PER AUTOMATION CYCLE</span>
+        <strong>10h saved</strong>
+      </article>
+      <article class="stat reveal-child">
+        <span>DAILY LEAD ROUTING</span>
+        <strong>13 agents</strong>
+      </article>
+      <article class="stat reveal-child">
+        <span>HEALTH PORTAL REPORTS</span>
+        <strong>2&times; / week</strong>
+      </article>
+    </section>
+
+    <section id="services" class="panel services contrast-panel panel-rise" data-field="pipeline">
+      <div class="services-header">
+        <div class="section-intro">
+          <p class="eyebrow reveal">What we build</p>
+          <h2 class="section-title reveal-clip">Simple systems for messy operations.</h2>
+        </div>
+        <div class="services-copy reveal">
+          <p>We turn scattered insurance workflows into measurable operating infrastructure: data enters cleanly, decisions move faster, and teams see what is happening before it becomes a problem.</p>
+          <a class="text-cta" href="#contact">Map your process</a>
+        </div>
+      </div>
+
+      <div class="service-grid reveal-group">
+        <article class="service-card tilt-card reveal-child is-primary">
+          <div class="service-mark" aria-hidden="true">
+            <div class="mark-table">
+              <div class="mark-row"><span>POL-4821</span><i class="badge low">LOW</i></div>
+              <div class="mark-row"><span>POL-4830</span><i class="badge high">HIGH</i></div>
+              <div class="mark-row"><span>POL-4819</span><i class="badge low">LOW</i></div>
+            </div>
+          </div>
+          <div class="service-content">
+            <span>01 / Core infrastructure</span>
+            <h3>Data Systems</h3>
+            <p>Scraping bots, ETL pipelines, GHL workflows, forecasting, and dashboards.</p>
+          </div>
+          <a href="#contact" class="service-action">Build the pipeline</a>
+        </article>
+
+        <article class="service-card tilt-card reveal-child">
+          <div class="service-mark" aria-hidden="true">
+            <div class="mark-app">
+              <div class="mark-sidebar"><i></i><i></i><i></i></div>
+              <div class="mark-main">
+                <div class="mark-card"></div>
+                <div class="mark-card"></div>
+              </div>
+            </div>
+          </div>
+          <div class="service-content">
+            <span>02 / Workflow surfaces</span>
+            <h3>Web Apps</h3>
+            <p>Performance trackers, portals, reservations, ecommerce, and internal tools.</p>
+          </div>
+          <a href="#contact" class="service-action">Design the tool</a>
+        </article>
+
+        <article class="service-card tilt-card reveal-child">
+          <div class="service-mark" aria-hidden="true">
+            <div class="mark-page">
+              <div class="mark-band nav-band"></div>
+              <div class="mark-band hero-band"></div>
+              <div class="mark-band body-band"></div>
+            </div>
+          </div>
+          <div class="service-content">
+            <span>03 / Market entry</span>
+            <h3>Landing Pages</h3>
+            <p>Clean coded pages for teams that need a fast, credible web presence.</p>
+          </div>
+          <a href="#contact" class="service-action">Launch faster</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="demos" class="panel demos" data-field="pipeline">
+      <div class="demos-header">
+        <p class="eyebrow reveal">Live systems</p>
+        <h2 class="section-title reveal-clip">What we actually build.</h2>
+        <p class="demos-sub reveal">Simplified previews of production systems running today for US insurance agencies.</p>
+      </div>
+
+      <div class="demo-tabs reveal">
+        <button class="demo-tab active" type="button" data-demo="agent">Agent Tracker</button>
+        <button class="demo-tab" type="button" data-demo="forecast">Forecasting Model</button>
+      </div>
+
+      <div class="demo-panel tilt-card has-corners" data-panel="agent">
+        <span class="corner-tl"></span>
+        <span class="corner-tr"></span>
+        <span class="corner-bl"></span>
+        <span class="corner-br"></span>
+        <div class="demo-chrome">
+          <span class="demo-chrome-label">Agent Tracker</span>
+          <div class="demo-chrome-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="demo-summary">
+          <span class="summary-dot is-green">ACTIVE 4/6</span>
+          <span class="summary-dot is-amber">BREAK 1</span>
+          <span class="summary-dot is-muted">OFFLINE 1</span>
+          <span>AVG APPTS 7.2</span>
+        </div>
+        <div class="demo-body">
+          <div class="agent-grid">
+            <article class="agent-card active">
+              <span class="agent-initials">JM</span>
+              <div>
+                <h3>Juan Mart&iacute;nez</h3>
+                <p>Appts: 9 <span>Calls: 24</span></p>
+              </div>
+              <span class="agent-status active">ACTIVE</span>
+              <time>8:02 AM</time>
+            </article>
+            <article class="agent-card active">
+              <span class="agent-initials">LP</span>
+              <div>
+                <h3>Luisa Pe&ntilde;a</h3>
+                <p>Appts: 11 <span>Calls: 31</span></p>
+              </div>
+              <span class="agent-status active">ACTIVE</span>
+              <time>7:45 AM</time>
+            </article>
+            <article class="agent-card active">
+              <span class="agent-initials">SA</span>
+              <div>
+                <h3>Sofia Arango</h3>
+                <p>Appts: 7 <span>Calls: 18</span></p>
+              </div>
+              <span class="agent-status active">ACTIVE</span>
+              <time>8:15 AM</time>
+            </article>
+            <article class="agent-card break">
+              <span class="agent-initials">CR</span>
+              <div>
+                <h3>Carlos Ruiz</h3>
+                <p>Appts: 5 <span>Calls: 11</span></p>
+              </div>
+              <span class="agent-status break">BREAK</span>
+              <time>7:58 AM</time>
+            </article>
+            <article class="agent-card active">
+              <span class="agent-initials">DM</span>
+              <div>
+                <h3>Diego Mora</h3>
+                <p>Appts: 6 <span>Calls: 16</span></p>
+              </div>
+              <span class="agent-status active">ACTIVE</span>
+              <time>8:30 AM</time>
+            </article>
+            <article class="agent-card offline">
+              <span class="agent-initials">VT</span>
+              <div>
+                <h3>Valentina Torres</h3>
+                <p>Appts: 0 <span>Calls: 0</span></p>
+              </div>
+              <span class="agent-status offline">OFFLINE</span>
+              <time>&mdash;</time>
+            </article>
+          </div>
+          <div class="demo-bottom">LAST UPDATED &middot; 11:24:07 AM &middot; AUTO-REFRESH 60s</div>
+        </div>
+      </div>
+
+      <div class="demo-panel tilt-card has-corners" data-panel="forecast" style="display:none">
+        <span class="corner-tl"></span>
+        <span class="corner-tr"></span>
+        <span class="corner-bl"></span>
+        <span class="corner-br"></span>
+        <div class="demo-chrome">
+          <span class="demo-chrome-label">Forecasting Model</span>
+          <div class="demo-chrome-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="demo-summary">
+          <span>ACTIVE 47</span>
+          <span class="summary-risk">AT RISK 30d 12</span>
+          <span class="summary-cash">PROJ 30d $28,400</span>
+          <span class="summary-avg">AVG RISK 2.8/5</span>
+        </div>
+        <div class="demo-body">
+          <div class="demo-table-wrap">
+            <div class="forecast-table" role="table" aria-label="Policy chargeback risk forecast">
+              <div class="forecast-row forecast-head" role="row">
+                <span>POLICY ID</span>
+                <span>AGENT</span>
+                <span>SOLD DATE</span>
+                <span>30d RISK</span>
+                <span>60d RISK</span>
+                <span>90d RISK</span>
+                <span>CASHFLOW</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4821</span><span>J. Mart&iacute;nez</span><span>Apr 12</span><span class="risk-badge low">LOW</span><span class="risk-badge low">LOW</span><span class="risk-badge med">MED</span><span>$1,240</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4822</span><span>S. Arango</span><span>Apr 14</span><span class="risk-badge med">MED</span><span class="risk-badge high">HIGH</span><span class="risk-badge high">HIGH</span><span>$880</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4819</span><span>C. Ruiz</span><span>Apr 08</span><span class="risk-badge low">LOW</span><span class="risk-badge low">LOW</span><span class="risk-badge low">LOW</span><span>$1,650</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4830</span><span>L. Pe&ntilde;a</span><span>Apr 18</span><span class="risk-badge high">HIGH</span><span class="risk-badge high">HIGH</span><span class="risk-badge high">HIGH</span><span>$320</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4815</span><span>D. Mora</span><span>Apr 02</span><span class="risk-badge low">LOW</span><span class="risk-badge med">MED</span><span class="risk-badge med">MED</span><span>$1,100</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4833</span><span>V. Torres</span><span>Apr 20</span><span class="risk-badge med">MED</span><span class="risk-badge med">MED</span><span class="risk-badge high">HIGH</span><span>$740</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4841</span><span>J. Mart&iacute;nez</span><span>Apr 24</span><span class="risk-badge low">LOW</span><span class="risk-badge low">LOW</span><span class="risk-badge low">LOW</span><span>$1,820</span>
+              </div>
+              <div class="forecast-row" role="row">
+                <span>POL-4844</span><span>S. Arango</span><span>Apr 28</span><span class="risk-badge high">HIGH</span><span class="risk-badge high">HIGH</span><span class="risk-badge high">HIGH</span><span>$290</span>
+              </div>
+            </div>
+          </div>
+          <div class="cashflow-strip">
+            <span class="cashflow-green">30 DAY <strong>$28,400</strong></span>
+            <span class="cashflow-amber">60 DAY <strong>$19,840</strong></span>
+            <span class="cashflow-red">90 DAY <strong>$11,200</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-studies" class="panel case-studies" data-field="graph">
+      <div class="section-intro">
+        <p class="eyebrow reveal">Proof of work</p>
+        <h2 class="section-title reveal-clip">Live systems.<br>Real results.</h2>
+        <p class="cs-sub reveal">Production systems running today for real clients.</p>
+      </div>
+
+      <div class="cs-anchor has-corners reveal">
+        <span class="corner-tl"></span>
+        <span class="corner-tr"></span>
+        <span class="corner-bl"></span>
+        <span class="corner-br"></span>
+        <div class="cs-anchor-left">
+          <strong class="cs-big-stat">3mo &rarr; 1wk</strong>
+          <p>Manual Sherpa extraction took 5&ndash;10 agents months of work. Our bot does the same in 7 days &mdash; and runs it daily.</p>
+        </div>
+        <div class="cs-anchor-right">
+          <div class="bar-row">
+            <span class="bar-label">BEFORE</span>
+            <div class="bar-track">
+              <div class="bar-fill before-bar" data-bar-width="90"></div>
+            </div>
+            <span class="bar-value">~90 days</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label after">AFTER</span>
+            <div class="bar-track">
+              <div class="bar-fill after-bar" data-bar-width="8"></div>
+            </div>
+            <span class="bar-value after">7 days</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-grid reveal-group">
+        <article class="cs-card has-corners reveal-child">
+          <span class="corner-tl"></span>
+          <span class="corner-tr"></span>
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+          <span class="cs-tag">DATA EXTRACTION &middot; AUTOMATION</span>
+          <strong class="cs-metric">3mo &rarr; 1wk</strong>
+          <h3>Sherpa Scraping Bot</h3>
+          <p>Replaced months of manual portal work by a 5&ndash;10 person team. Bot runs daily cycles that were previously impossible.</p>
+          <div class="cs-tags">PYTHON &middot; SCRAPING &middot; AUTOMATION</div>
+        </article>
+        <article class="cs-card has-corners reveal-child">
+          <span class="corner-tl"></span>
+          <span class="corner-tr"></span>
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+          <span class="cs-tag">CRM &middot; LEAD MANAGEMENT</span>
+          <strong class="cs-metric">13 agents &middot; daily</strong>
+          <h3>GHL CRM Pipeline</h3>
+          <p>Daily pipeline pulls, transforms, and assigns leads by round-robin to 13 agents. Zero manual routing &mdash; every day.</p>
+          <div class="cs-tags">GHL &middot; RAILWAY &middot; ETL</div>
+        </article>
+        <article class="cs-card has-corners reveal-child">
+          <span class="corner-tl"></span>
+          <span class="corner-tr"></span>
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+          <span class="cs-tag">WEB SCRAPING &middot; HEALTH INSURANCE</span>
+          <strong class="cs-metric">10h &times; 2/week</strong>
+          <h3>Health Provider Reports</h3>
+          <p>Portal bots generate 3 member reports twice weekly. XLSX + JSON pushed live to a business dashboard.</p>
+          <div class="cs-tags">SCRAPING &middot; JSON &middot; MEDICARE</div>
+        </article>
+        <article class="cs-card financial has-corners reveal-child">
+          <span class="corner-tl"></span>
+          <span class="corner-tr"></span>
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+          <span class="cs-tag">FORECASTING &middot; LIFE INSURANCE</span>
+          <strong class="cs-metric">30 &middot; 60 &middot; 90 days</strong>
+          <h3>Chargeback Forecasting Model</h3>
+          <p>Maps cashflow exposure and chargeback risk per policy. Foundation for future ML risk scoring.</p>
+          <div class="cs-tags">PYTHON &middot; FORECASTING &middot; ML-READY</div>
+        </article>
+      </div>
+
+      <div class="cs-full has-corners reveal">
+        <span class="corner-tl"></span>
+        <span class="corner-tr"></span>
+        <span class="corner-bl"></span>
+        <span class="corner-br"></span>
+        <div>
+          <span class="cs-tag">SALES OPS &middot; ATTRIBUTION</span>
+          <strong class="cs-metric">Source &rarr; close &middot; full visibility</strong>
+          <h3>Lead-to-Sale Tracker</h3>
+          <p>Maps every lead from source through pipeline to close. Agent attribution, source performance, conversion rates.</p>
+          <div class="cs-tags">TRACKING &middot; ATTRIBUTION &middot; SALES OPS</div>
+        </div>
+        <div class="funnel" aria-label="Lead-to-sale funnel visualization">
+          <div class="funnel-row">
+            <span>LEADS</span>
+            <div class="funnel-track"><i style="--w:100%"></i></div>
+            <strong>100%</strong>
+          </div>
+          <div class="funnel-row">
+            <span>CONTACTED</span>
+            <div class="funnel-track"><i style="--w:68%"></i></div>
+            <strong>68%</strong>
+          </div>
+          <div class="funnel-row">
+            <span>QUALIFIED</span>
+            <div class="funnel-track"><i style="--w:34%"></i></div>
+            <strong>34%</strong>
+          </div>
+          <div class="funnel-row">
+            <span>CLOSED</span>
+            <div class="funnel-track"><i style="--w:18%"></i></div>
+            <strong>18%</strong>
+          </div>
+        </div>
+      </div>
+
+      <p class="cs-portfolio-note">OTHER WORK &mdash; Nuba Tours &middot; ArtHaus &middot; Ojo Sideral &middot; Sluggers</p>
+    </section>
+
+    <section id="process" class="panel process" data-field="pipeline">
+      <div class="process-grid">
+        <div class="section-intro">
+          <p class="eyebrow reveal">Process</p>
+          <h2 class="section-title reveal-clip">Find the friction. Build the system.</h2>
+        </div>
+
+        <div class="steps reveal-group">
+          <article class="step reveal-child">
+            <span>01</span>
+            <h3>Map</h3>
+            <p>Manual work, data sources, ownership, and risk.</p>
+          </article>
+          <article class="step reveal-child">
+            <span>02</span>
+            <h3>Build</h3>
+            <p>Focused automation with a fixed outcome.</p>
+          </article>
+          <article class="step reveal-child">
+            <span>03</span>
+            <h3>Operate</h3>
+            <p>Deploy, document, train, and improve.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel contact" data-field="pipeline">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Ready</p>
+        <h2 class="section-title">Let's see what your<br>data could be doing.</h2>
+        <p class="contact-sub">45-minute discovery call. We walk through your current processes, identify where automation creates leverage, and give you a written diagnosis &mdash; free, no commitment.</p>
+        <p class="contact-context">Three-person team based in Medell&iacute;n. Working inside Medicare, Medicaid, and private insurance workflows since 2023.</p>
+        <a class="corner-button large" href="https://cal.com/crescendolabs/discovery" target="_blank" rel="noopener">Book a discovery call</a>
+        <p class="contact-email">Or reach us at <a href="mailto:hola@crescendolabs.co">hola@crescendolabs.co</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-meta">
+      <span>CRESCENDO LABS</span>
+      <span>MEDELL&Iacute;N, COLOMBIA</span>
+      <a href="mailto:hola@crescendolabs.co">HOLA@CRESCENDOLABS.CO</a>
+    </div>
+    <a class="corner-button footer-cta" href="https://cal.com/crescendolabs/discovery" target="_blank" rel="noopener">Book a systems audit</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
