@@ -299,29 +299,28 @@ main,
 .hero-title span {
   position: absolute;
   display: block;
-  max-width: min(700px, 62vw);
+  max-width: min(520px, 34vw);
   color: rgba(245, 245, 241, 0.96);
-  font-size: clamp(30px, 3.5vw, 46px);
-  font-weight: 700;
-  line-height: 1.05;
+  font-size: clamp(52px, 7.5vw, 92px);
+  font-weight: 500;
+  line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  text-wrap: nowrap;
+  text-wrap: balance;
   opacity: 1;
 }
 
 .hero-left {
-  top: 40%;
+  top: 52%;
   left: clamp(12px, 2vw, 34px);
   transform: translateY(-50%);
 }
 
 .hero-right {
-  top: 60%;
-  left: clamp(12px, 2vw, 34px);
-  right: auto;
+  top: 52%;
+  right: clamp(12px, 2vw, 34px);
   transform: translateY(-50%);
-  text-align: left;
+  text-align: right;
 }
 
 .hero-cta {
